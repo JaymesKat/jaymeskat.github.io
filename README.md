@@ -1,2 +1,2 @@
-# jaymeskat.github.io-cs472-homepage
-Labs for MIU Web Application Programming Course
+# James Katarikawe's CS472 Homepage
+Homework for MIU Web Application Programming Course
