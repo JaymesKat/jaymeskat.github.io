@@ -1,0 +1,40 @@
+html,
+body {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #00FF66;
+    background-color: #282828;
+    padding: 2rem;
+}
+
+h1, h3, h4, span {
+    font-weight: bold;
+    color: #FFCC00;
+}
+
+li a {
+    color: #00FF66;
+    text-decoration: none;
+}
+
+li a:hover {
+    text-decoration: underline;
+}
+
+img {
+    max-width: 8rem;
+    object-fit: cover;
+}
+
+.mood {
+    display: inline-block;
+    margin: 0 2rem;
+    vertical-align: top;
+}
+
+p::first-letter {
+    font-size: 1.5em;
+}
