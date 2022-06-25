@@ -2,6 +2,31 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #00FF66;
+    background-color: #282828;
+    padding: 2rem;
+}
+
+h1, h3, h4, span {
+    font-weight: bold;
+    color: #FFCC00;
+}
+
+li {
+    line-height: 1.5;
+}
+
+li a {
+    color: #00FF66;
+    text-decoration: none;
+}
+
+li a:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}
 
 .profile-pic {
     max-width: 6rem;
