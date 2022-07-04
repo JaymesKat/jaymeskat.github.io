@@ -1,0 +1,123 @@
+body {
+    margin: 0px;
+    padding: 0;
+    font-family: 'Verdana', 'Tahoma', 'sans-serif';
+    font-size: 8pt;
+    background-image: url('images/background.png');
+}
+
+.banner {
+    display: block;
+    background-image: url("./images/bannerbg.png");
+    background-repeat: repeat-x;
+    text-align: center;
+}
+
+.title {
+    font-size: 24pt;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 3px 3px#999999;
+}
+
+.overall-content {
+    width: 800px;
+    margin: 2rem auto;
+    border-radius: 20px;
+    border: 4px gray solid;
+    overflow: hidden;
+}
+
+.reviews {
+    width: 550px;
+}
+
+.reviews .reviews-banner {
+    background-image: url("images/rbg.png");
+    background-repeat: repeat-x;
+    height: 83px;
+}
+.reviews .reviews-banner img {
+    height: 83px;
+}
+.reviews .reviews-banner .rating {
+    font-size: 48pt;
+    color: red;
+    font-weight: bold;
+    vertical-align: bottom;
+}
+
+.general-overview {
+    float: right;
+    background-color: #A2B964;
+    width:  250px;
+    font-family: 'Arial', sans-serif;
+}
+
+.general-overview dl {
+    padding-left: 20px;
+}
+
+.general-overview dt {
+    margin-top: 10pt;
+    font-size: 8pt;
+    font-weight: bold;
+}
+
+.general-overview .links {
+    padding-left: 0;
+}
+.general-overview .links li {
+    list-style-type: none;
+}
+
+.review-column {
+    width: 47%;
+    display: inline-block;
+    padding-left: 2%;
+}
+
+.review-column.left {
+    float: left;
+}
+.review-column q {
+    font-weight: bold;
+    font-size: 8pt;
+}
+
+.review-column p:nth-child(2n-1) {
+    background-color: #E8DC9B;
+    font-size: 8pt;
+    border-radius: 10px;
+    border: 2px solid gray;
+    padding: 8px;
+    min-height: 25px;
+}
+
+.review-column p:nth-child(2n) img,
+.review-column p:nth-child(2n-1) img {
+    float: left;
+    margin-right: 5px;
+}
+
+.review-column p:nth-child(2n) {
+    margin-bottom: 20pt;
+}
+
+.pagination {
+    clear: both;
+    margin-bottom: auto;
+    text-align: center;
+    padding: 5px;
+    background-color: #A2B964;
+}
+
+.validator {
+    position: fixed;
+    bottom: 2px;
+    right: 2px;
+}
+
+.validator img {
+    opacity: 0.5;
+}
