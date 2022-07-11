@@ -27,48 +27,51 @@ nav ul li {
 }
 
 main {
-    display: grid;
-    grid-template-columns: 2fr 3fr 2fr;
+    display: block;
     width: 100vw;
 }
 
 main section {
     height: 30rem;
-    padding: 1rem 0 1rem 1rem;
     font-size: 1.5rem;
 }
 
 .column1 {
     background-color: #aaaaaa;
+    display: inline-block;
+    width: 30vw;
+    float: left;
 }
 
 .column2 {
     background-color: #bbbbbb;
+    display: inline-block;
+    width: 40vw;
+    float: left;
 }
 
 .column3 {
     background-color: #cccccc;
+    display: inline-block;
+    width: 30vw;
 }
 
 @media screen and (max-width: 600px) {
-    main {
-        grid-template-columns: 2fr 2fr;
-        grid-template-rows: auto auto;
-    }
 
     .column1 {
-        grid-column: 1 / span 1;
-        grid-row: 1;
+        display: inline-block;
+        width: 50%;
     }
 
     .column3 {
-        grid-column: 2 / span 1;
-        grid-row: 1;
+        display: inline-block;
+        float: none;
+        width: 50%;
     }
 
     .column2 {
-        grid-column: 1 / span 2;
-        grid-row: 2;
+        display: inline-block;
+        width: 100%;
     }
 }
 
