@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Task list</title>
+    <link rel="stylesheet" type="text/css" href="styles/tasks.css" media="screen" />
+</head>
+
+<body>
+    <header>
+        <span>Task list</span>
+    </header>
+    <main id="taskPage">
+        <section>
+            <form id="taskForm">
+                <div>
+                    <label>Task</label> <input type="text" maxlength="200" required="required" name="task" class="large"
+                        placeholder="Breakfast at Tiffanys" />
+                </div>
+                <div>
+                    <label>Required by</label> <input type="date" required="required" name="requiredBy" />
+                </div>
+                <div>
+                    <label>Category</label> <select name="category">
+                        <option value="Personal">Personal</option>
+                        <option value="Work">Work
+                        </option>
+                    </select>
+                </div>
+                <nav>
+                    <a id="saveTask" href="#">Save task</a> <a href="#">Clear task</a>
+                </nav>
+            </form>
+        </section>
+        <section>
+            <table id="tblTasks">
+                <colgroup>
+                    <col width="50%">
+                    <col width="25%">
+                    <col width="25%">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Due</th>
+                        <th>Category</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Return library books</td>
+                        <td><time datetime="2013-10-14">2013-10-14</time></td>
+                        <td>Personal</td>
+                    </tr>
+                    <tr class="even">
+                        <td>Perform project demo to
+                            stakeholders</td>
+                        <td><time datetime="2013-10-14">2013-10-14</time></td>
+                        <td>Work</td>
+                    </tr>
+                    <tr>
+                        <td>Meet friends for dinner</td>
+                        <td><time datetime="2013-10-14">2013-10-14</time></td>
+                        <td>Personal</td>
+                    </tr>
+                </tbody>
+            </table>
+            <nav>
+                <a href="#">Add task</a>
+                <a id="printToConsole" href="#">Print object to console</a>
+                <a id="loadObject" href="#">Load object into console</a>
+            </nav>
+        </section>
+
+    </main>
+    <footer>You have 3 tasks</footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.templates/beta1/jquery.tmpl.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.js"></script>
+    <script src="scripts/jquery-serialization.js"></script>
+    <script src="scripts/tasks-controller.js"></script>
+    <script id="taskRow" type="text/x-jQuery-tmpl">
+        <tr>
+            <td>${task}</td>
+            <td><time datetime="${requiredBy}">${requiredBy} </time></td>
+            <td>${category}</td>
+            <td>
+            <nav>
+                <a href="#">Edit</a>
+                <a href="#">Complete</a>
+                <a href="#" class="deleteRow">Delete</a>
+            </nav>
+            </td>
+        </tr>
+    </script>
+    <script>
+        $(document).ready(function() {
+            tasksController.init($('#taskPage'));
+        });
+    </script>
+</body>
+
+</html>
