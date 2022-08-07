@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Clean Screen</title>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    </head>
+    <body>
+        <main>
+            <form id="form">
+                <h2>Settings</h2>
+                <label for="width">width:</label>
+                <input type="text" id="width" name="width"><br><br>
+                <label for="growth_amount">growth amount:</label>
+                <input type="number" id="growth_amount" name="growth_amount"><br><br>
+                <label for="growth_rate">growth rate (ms):</label>
+                <input type="number" id="growth_rate" name="growth_rate"><br><br>
+                <label for="num_circles">number circles:</label>
+                <input type="number" id="num" name="num"><br><br>
+                <input type="submit" value="Start">
+            </form>
+            <div class="circle" style="position: absolute;width:50px;
+                height:50px;
+                border-radius:50%;
+                background-color: #45FE34;
+                margin: auto;
+                top: 50%;
+                left: 45%;
+                display:none;">
+                &nbsp;
+            </div>
+        </main>
+        <script>
+            let circleWidth, growthRate, growthAmount;
+            let circle = document.querySelector('.circle');
+            const form = document.querySelector("#form");
+            form.addEventListener('submit', (event) => {
+                event.preventDefault();
+                circleWidth = document.querySelector('#form #width').value;
+                growthAmount = Number.parseFloat(document.querySelector('#form #growth_amount').value);
+                growthRate = Number.parseFloat(document.querySelector('#form #growth_rate').value);
+                circle.style.width = circleWidth;
+                circle.style.height = circleWidth;
+                circle.style.display = "block";
+                start();
+            });
+            function start(){
+                let width, height;
+                setInterval(() => {
+                    width = Number.parseFloat(circle.style.width);
+                    height = Number.parseFloat(circle.style.height);
+                    circle.style.width = `${width+growthAmount}px` ;
+                    circle.style.height = `${height + growthAmount}px`;
+                }, growthRate);
+            }
+            circle.addEventListener('click', ()=>{
+                circle.style.display = "none";
+            })
+        </script>
+    </body>
+</html>
